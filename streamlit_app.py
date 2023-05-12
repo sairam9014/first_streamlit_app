@@ -54,3 +54,6 @@ streamlit.header("Fruityvice Fruit Advice!")
 # allow the end user to add the fruit to the list
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
 streamlit.write('Thanks for adding', add_my_fruit)
+
+# to load data from streamlit to snowflake
+my_cur.execute(f"insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('{add_my_fruit')")
